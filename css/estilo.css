@@ -1,0 +1,25 @@
+:root{
+    --color-fondo: #000000;
+    --color-botones: #50C878;
+    --color-titulos: #00FFFF;
+}
+
+body {
+    background-color: var(--color-fondo);
+    box-sizing: border-box;
+}
+
+.titulo-1 {
+    color: var(--color-titulos);
+}
+p{
+    color: aliceblue;
+}
+
+a {
+    background-color: var(--color-botones);
+}
+i{
+    color: aliceblue;
+}
+    
