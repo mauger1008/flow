@@ -1,120 +1,214 @@
 <!DOCTYPE html>
-<html lang="es" class="h-100">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Video Unlock</title>
-    <!-- CSS de Bootstrap 5 -->
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="icon" type="image/png" sizes="32x32" href="img/logo-andres.jpeg">
-     <!-- Iconos de Bootstrap --> 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="css/estilo.css">
-    </head>
-<body class="d-flex flex-column h-100">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
 
-    <!-- Contenido Principal -->
-    <main class="flex-shrink-0 container my-auto py-5 px-4 text-center">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                
-                <!-- Título Principal -->
-                <h1 class="display-4 mb-3 titulo-1">
-                    Descubre el Secreto del Éxito Comercial
-                </h1>
-                
-                <!-- Subtítulo -->
-                <p class="lead text-secondary mb-5 fs-5">
-                    Mira el siguiente video completo para desbloquear tu acceso exclusivo al checkout.
-                </p>
+  <!-- Bootstrap 5 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
 
-                <!-- Contenedor del Video (Usando la clase Ratio nativa de Bootstrap 5) -->
-                <div class="ratio ratio-16x9 rounded-3 shadow-lg mb-5">
-                    <!-- El script de YouTube reemplazará este div automáticamente -->
-                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=aqxpcRod_9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div id="player"></div>
-                </div>
+  <!-- ============================================================
+       HEADER — edita el título y el subtítulo aquí
+       ============================================================ -->
+  <header>
+    <div style="max-width:900px; margin:0 auto;">
+      <h1>Descubre Todo lo que Puedes Lograr</h1>
+      <p>Mira el video completo y desbloquea acceso exclusivo a nuestra oferta especial.</p>
+    </div>
+  </header>
 
-                <!-- Botón de Checkout (Inicialmente Deshabilitado) -->
-                <div class="row justify-content-center">
-                    <div class="col-12 col-sm-8 col-md-6 col-lg-5">
-                        <a id="checkout-btn" href="https://tu-link-de-checkout.com" class="btn btn-success btn-lg w-100 py-3 fw-bold shadow-sm disabled" role="button" aria-disabled="true">
-                            <i class="bi bi-cart-fill me-2"></i>Ir al Checkout
-                        </a>
-                        <small id="btn-hint" class="text-muted d-block mt-3 fst-italic">
-                            <p>El botón se activará automáticamente al finalizar el video.</p>
-                        </small>
-                    </div>
-                </div>
+  <!-- ============================================================
+       SECCIÓN PRINCIPAL — VIDEO + BOTÓN
+       ============================================================ -->
+  <main>
+    <div style="max-width:860px; margin:0 auto;">
 
-            </div>
+      <!-- VIDEO — reemplaza el src con la URL de tu propio video -->
+      <div class="video-wrapper">
+        <video
+          id="mi-video"
+          controls
+          controlsList="nodownload"
+          poster=""
+        >
+          <source src="scr/video1.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <div id="barra-progreso-track">
+          <div id="barra-progreso"></div>
         </div>
-    </main>
+      </div>
 
-    <!-- Pie de Página Editable -->
-    <footer class="footer mt-auto py-4 bg-dark text-white border-top border-secondary">
-        <div class="container text-center">
-            <p class="mb-3 text-secondary small">&copy; 2026 Tu Empresa. Todos los derechos reservados.</p>
-            
-            <!-- Redes Sociales -->
-            <div class="d-flex justify-content-center gap-4 fs-3">
-                <a href="https://facebook.com" class="text-white link-primary transition" target="_blank" rel="noopener" aria-label="Facebook">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://instagram.com" class="text-white link-danger transition" target="_blank" rel="noopener" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://twitter.com" class="text-white link-info transition" target="_blank" rel="noopener" aria-label="Twitter X">
-                    <i class="bi bi-twitter-x"></i>
-                </a>
-                <a href="https://youtube.com" class="text-white link-danger transition" target="_blank" rel="noopener" aria-label="YouTube">
-                    <i class="bi bi-youtube"></i>
-                </a>
-            </div>
+      <!-- CONTADOR REGRESIVO -->
+      <div id="contador-wrapper">
+        <div id="contador-pill">
+          <i class="bi bi-clock"></i>
+          <span>
+            El botón se habilitará en
+            <span id="tiempo-restante">--:--</span>
+          </span>
         </div>
-    </footer>
+        <p id="mensaje-ok">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          ¡Video completado! El botón de compra ya está disponible.
+        </p>
+      </div>
 
-    <!-- JS de Bootstrap -->
-    <script src="https://jsdelivr.net"></script>
+      <!-- BOTÓN DE CHECKOUT — cambia el href por tu URL de pago -->
+      <a
+        id="btn-checkout"
+        href="#checkout"
+      >
+        <i class="bi bi-lock-fill" id="icono-btn"></i>
+        <span id="texto-btn">Mira el video para continuar</span>
+      </a>
 
-    <!-- Lógica de la API de YouTube -->
-    <script>
-        var tag = document.createElement('script');
-        tag.src = "https://youtube.com";
-        var firstScriptTag = document.getElementsByTagName('script');
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      <!-- TARJETAS DE CONFIANZA -->
+      <div class="row g-3 mt-4">
+        <div class="col-4">
+          <div class="feature-card">
+            <i class="bi bi-shield-check"></i>
+            <span>Pago Seguro</span>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="feature-card">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            <span>Garantía 30 días</span>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="feature-card">
+            <i class="bi bi-headset"></i>
+            <span>Soporte 24/7</span>
+          </div>
+        </div>
+      </div>
 
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'dQw4w9WgXcQ', // REEMPLAZA ESTE ID por el de tu video
-                playerVars: {
-                    'playsinline': 1,
-                    'controls': 1,
-                    'rel': 0
-                },
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
+    </div>
+  </main>
 
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.ENDED) {
-                var checkoutBtn = document.getElementById('checkout-btn');
-                var btnHint = document.getElementById('btn-hint');
-                
-                // Activa el botón quitando clases de Bootstrap
-                checkoutBtn.classList.remove('disabled');
-                checkoutBtn.removeAttribute('aria-disabled');
-                
-                // Cambia el color del texto informativo con utilidades de color
-                btnHint.textContent = "¡Acceso desbloqueado con éxito!";
-                btnHint.classList.replace('text-muted', 'text-success');
-                btnHint.classList.add('fw-bold');
-            }
-        }
-    </script>
+  <!-- ============================================================
+       FOOTER — edita la marca, redes y links legales aquí
+       ============================================================ -->
+  <footer>
+    <div style="max-width:900px; margin:0 auto;">
+      <div class="row gy-4 align-items-center">
+
+        <!-- MARCA -->
+        <div class="col-12 col-md-4 text-center text-md-start">
+          <div class="brand-name">
+            <i class="bi bi-play-circle-fill"></i>MiMarca
+          </div>
+          <div class="brand-desc">Transformando vidas a través del conocimiento.</div>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="col-12 col-md-4">
+          <div class="social-title">Síguenos</div>
+          <div class="social-links">
+            <!-- Cambia los href="#" por tus URLs reales -->
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"  title="Facebook" ><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X/Twitter" title="X/Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"   title="YouTube"  ><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="TikTok"    title="TikTok"   ><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- LINKS LEGALES -->
+        <div class="col-12 col-md-4">
+          <div class="legal-links">
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class="copyright">
+        &copy; <span id="anio"></span> MiMarca. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- ============================================================
+       LÓGICA DEL VIDEO — no necesitas tocar esto
+       ============================================================ -->
+  <script>
+    // Año dinámico en el footer
+    document.getElementById('anio').textContent = new Date().getFullYear();
+
+    const video        = document.getElementById('mi-video');
+    const barra        = document.getElementById('barra-progreso');
+    const tiempoEl     = document.getElementById('tiempo-restante');
+    const contPill     = document.getElementById('contador-pill');
+    const mensajeOk    = document.getElementById('mensaje-ok');
+    const btnCheckout  = document.getElementById('btn-checkout');
+    const iconoBtn     = document.getElementById('icono-btn');
+    const textoBtn     = document.getElementById('texto-btn');
+
+    function formatTime(seg) {
+      const m = Math.floor(seg / 60);
+      const s = seg % 60;
+      return m + ':' + String(s).padStart(2, '0');
+    }
+
+    // Al cargar los metadatos del video, mostramos el tiempo total
+    video.addEventListener('loadedmetadata', function () {
+      tiempoEl.textContent = formatTime(Math.ceil(video.duration));
+    });
+
+    // Actualiza barra y contador mientras se reproduce
+    video.addEventListener('timeupdate', function () {
+      if (video.duration > 0) {
+        var pct = (video.currentTime / video.duration) * 100;
+        barra.style.width = pct + '%';
+        var restante = Math.ceil(video.duration - video.currentTime);
+        tiempoEl.textContent = formatTime(Math.max(restante, 0));
+      }
+    });
+
+    // Al terminar el video → habilitar botón
+    video.addEventListener('ended', function () {
+      barra.style.width = '100%';
+
+      // Ocultar contador y mostrar mensaje
+      contPill.style.display  = 'none';
+      mensajeOk.style.display = 'block';
+
+      // Activar botón
+      btnCheckout.classList.add('activo');
+      btnCheckout.removeAttribute('style'); // quita cursor:not-allowed inline si hubiese
+      iconoBtn.className = 'bi bi-bag-check-fill';
+      textoBtn.textContent = 'Ir al Checkout';
+    });
+  </script>
+
 </body>
 </html>
